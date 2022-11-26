@@ -5,7 +5,6 @@ import math
 
 PI=3.141592653589
 
-
 def sin(x):
     return math.sin(x)
 
@@ -14,15 +13,6 @@ def cos(x):
 
 def tan(x):
     return math.tan(x)
-
-imax = 500
-jmax = 500
-
-
-
-ZOOMFACTOR = 1
-
-
 
 
 def getPoints(dataset, xy, xz, ZOOMFACTOR, imax, jmax):
@@ -80,7 +70,11 @@ def loadData(file_name):
 
     return np.array(data)
 
-
+imax = 500
+jmax = 500
+xz=PI/4
+xy=PI/4
+ZOOMFACTOR = 1
 
 if __name__ == "__main__":
     dataset = loadData(sys.argv[1])

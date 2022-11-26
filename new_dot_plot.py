@@ -16,21 +16,6 @@ def sin(x):
 def cos(x):
     return math.cos(x)
 
-
-
-
-
-ZOOMFACTOR = 1
-imax = 500
-jmax = 500
-SCREEN_SIZE = WIDTH, HEIGHT = (imax, jmax)
-xz=PI/4
-xy=PI/4
-
-
-
-
-
 def getPoints(dataset, xy, xz, ZOOMFACTOR, imax, jmax):
 
         transMatrix = np.matrix(
@@ -69,6 +54,14 @@ def loadData(file_name):
             data.append([float(k) for k in line.split(",")])
 
     return np.array(data)
+
+
+ZOOMFACTOR = 1
+imax = 500
+jmax = 500
+SCREEN_SIZE = WIDTH, HEIGHT = (imax, jmax)
+xz=PI/4
+xy=PI/4
 
 if __name__ == "__main__":
     dataset = loadData(sys.argv[1])
